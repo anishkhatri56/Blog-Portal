@@ -1,0 +1,94 @@
+{% extends 'main.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<!-- Main Section -->
+<main class="singleProject my-md">
+    <div class="container">
+      <div class="layout">
+        <div class="column column--1of3">
+          <h3 class="singleProject__subtitle">Training Videos</h3>
+          <div class="singleProject__toolStack">
+            {% for tag in project.tags.all %}
+            <span class="tag tag--pill tag--sub tag--lg">
+              <small>{{tag}}</small>
+            </span>
+            {% endfor %}
+          </div>
+
+          {% if project.source_link %}
+          <a class="singleProject__liveLink" href="{{project.source_link}}" target="_blank"><i class="im im-external-link"></i>Training Video  
+          </a>
+          {% endif %}
+
+          <br>
+
+          {% if project.demo_link %}
+          <a class="singleProject__liveLink" href="{{project.demo_link}}" target="_blank"><i class="im im-external-link"></i>My HQ Stats 
+          </a>
+          {% endif %}
+          {% comment %} <a href="{% url 'join' %}"><button type="button" class="btn btn-lg btn-primary">Get Premium</button></a> {% endcomment %}
+
+        </div>
+        <div class="column column--2of3">
+          <img class="singleProject__preview" src= "{% static 'img/hwcc.jpg' %}" alt="portfolio thumbnail" />
+          <a href="{% url 'user-profile' project.owner.id %}" class="singleProject__developer">{{project.owner.name}}</a>
+          <h2 class="singleProject__title">{{project.title}}</h2>
+          <h3 class="singleProject__subtitle">Player Details and Stats</h3>
+          <div class="singleProject__info">
+            {{project.description}}
+          </div>
+
+          <div class="comments">
+            <h3 class="singleProject__subtitle">Comments</h3>
+            <h5 class="project--rating">
+              {{project.vote_ratio}}% Feedback ({{project.vote_total}}) Vote{{project.vote_total|pluralize:"s"}}
+            </h5>
+            {% if request.user.profile.id in project.reviewers %}
+               <p> You have already submitted your vote for this player!! </p>
+              {% elif request.user.profile == project.owner %}
+                 <p> You cannot rate yourself!! </p>
+              {% elif request.user.is_authenticated %}
+              <form class="form" action="{% url 'project' project.id %}" method="POST">
+                {% csrf_token %}
+                {% for field in form %}
+                <div class="form__field">
+                  <label for="formInput#textarea">{{field.label}}</label>
+                  {{field}}
+                </div>
+                {% endfor %}
+                <input class="btn btn--sub btn--lg" type="submit" value="Leave Your Review " />
+              </form>
+              {% else %}
+                <a href = "{% url 'login' %}?next={{request.path}}">Please login to leave a vote</a>
+              {% endif %}
+
+            {% comment %} Add review Section  {% endcomment %}
+            {% for review in project.review_set.all %}
+            {% if review.body %}
+            <div class="commentList">
+              <div class="comment">
+                <a href={% url 'user-profile' review.owner.id %}>
+                  <img class="avatar avatar--md"
+                    src="{{review.owner.profile_image.url}}" alt="user" />
+                </a>
+                <div class="comment__details">
+                  <a href="{% url 'user-profile' review.owner.id %}" class="comment__author">{{review.owner.name}}</a>
+                  <p class="comment__info">{{review.body|linebreaksbr}}</p>
+                </div>
+              </div>
+              <div class="comment">
+            {% endif %}  
+            {% endfor %}
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+
+
+{% endblock content %}

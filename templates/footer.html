@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HWCC</title>
+  <link rel="shortcut icon" href="/favicon.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+
+  <footer class="footer">
+  	 <div class="container">
+  	 	<div class="row">
+  	 		<div class="footer-col">
+  	 			<h4>Organization</h4>
+  	 			<ul>
+  	 				<li><a href="{% url 'about' %}">About Us </a></li>
+  	 				{% comment %} <li><a href="">Our Services </a></li>
+  	 				<li><a href="#">Privacy Policy</a></li> {% endcomment %}
+  	 				<li><a href=""{% url 'projects' %}"">Our Players</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>get help</h4>
+  	 			<ul>
+  	 				<li><a href="#">FAQ</a></li>
+  	 				<li><a href="{% url 'membership' %}">Membership</a></li>
+  	 				<li><a href="{% url 'contact' %}">Contact Us</a></li>
+  	 				{% comment %} <li><a href="{% url 'testing' %}"></a>Testing</li> {% endcomment %}
+  	 				<li><a href="{% url 'vlogs' %}">Vlogs</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>HWCC</h4>
+  	 			<ul>
+  	 				<li><a href="#">Contact : +61 483 250 035</a></li>
+  	 				<li><a href="#">9 Charles Street, Ascot Park</a></li>
+  	 				
+  	 				
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>follow us</h4>
+  	 			<div class="social-links">
+  	 				<a href="https://www.facebook.com/himalayanwarriors"><i class="fab fa-facebook-f"></i></a>
+  	 				<a href="https://twitter.com/khatrianish395"><i class="fab fa-twitter"></i></a>
+  	 				<a href="#"><i class="fab fa-instagram"></i></a>
+  	 				<a href="https://www.linkedin.com/in/anish-khatri-3962a0214/"><i class="fab fa-linkedin-in"></i></a>
+  	 			</div>
+  	 		</div>
+  	 	</div>
+  	 </div>
+  </footer>
+
+</body>
+</html>

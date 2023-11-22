@@ -1,0 +1,51 @@
+{% extends 'Products/navbar.html' %}
+
+
+{% load static %}
+{% block content %}
+	<div class="grid grid--three">
+    {% for product in products %}
+		<div class="col-lg-4">
+			<img class="thumbnail" src= "{% static 'img/hwcc.svg' %}">
+			<div class="box-element product">
+				<h6><strong>{{product.name}}</strong></h6>
+				<hr>
+        
+        <button data-product = {{product.id}} data-action = "add" 
+         class="btn btn-outline-secondary add-btn
+          update-cart">Add to Cart</button>
+				{% comment %} <a class="btn btn-outline-success" href="#">View</a> {% endcomment %}
+				<h4 style="display: inline-block; float: right"><strong>${{product.price|floatformat:2}}</strong></h4>
+
+			</div>
+    <div>
+   
+    </div>
+		</div>
+
+  
+    {% endfor %}
+    
+
+    
+    
+
+  
+
+   
+   
+  
+
+{% endblock content %}
+
+
+{% comment %} <div class="hero-section__search">
+    <form id = 'searchForm' class="form" action="{% url 'profiles'%}" method="get">
+      <div class="form__field">
+        <label for="formInput#search">Search Products </label>
+        <input class="input input--text" id="formInput#search" type="text" name="search_query"
+          value = "{{search_query}}" placeholder="Search by products name  " />
+      </div>
+      <input class="btn btn-outline-success" type="submit" value="Search" />
+    </form> 
+  </div>{% endcomment %}

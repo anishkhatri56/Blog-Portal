@@ -1,0 +1,828 @@
+/* font-family: 'Lexend', sans-serif;
+font-family: 'Raleway', sans-serif; */
+
+body {
+  margin: 0%;
+  padding: 0%;
+  overflow-x: hidden;
+}
+
+/* ***********PAGE 1***************** */
+.container1 {
+  background-image: url(images/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-position-x: -50px;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+  margin: 0%;
+  padding: 0%;
+}
+
+/* *********NAVIGATION BAR***************** */
+header {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  display: inline-flex;
+  text-align: center;
+  width: 100vw;
+  justify-content: space-evenly;
+  align-items: center;
+}
+/* *********LOGO*********** */
+.logo img {
+  justify-content: center;
+  width: 100px;
+  margin-top: 5px;
+}
+/* **********NAVIGATION BAR TEXT */
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin: 0px 28px;
+  font-family: "Lexend", sans-serif;
+  color: lightgray;
+}
+.menu a:hover {
+  color: rgba(255, 0, 0, 0.733);
+}
+
+/* ************NAVIGATION BAR LINKS *************** */
+.links a i {
+  margin-right: 20px;
+  color: lightgray;
+}
+.links a i:hover {
+  color: rgba(255, 0, 0, 0.733);
+}
+
+/* **************TITLE*********** */
+.title h1 {
+  font-family: "Lexend", sans-serif;
+  color: white;
+  font-size: 93px;
+  justify-content: center;
+  margin: 120px 3px 0px 0px;
+  line-height: 82px;
+  text-align: center;
+  cursor: default;
+}
+.title h1 span {
+  color: rgba(255, 0, 0, 0.911);
+  font-size: 110px;
+}
+/* ************** PAGE 1 BUTTON************  */
+.btn {
+  text-align: center;
+  margin-top: 60px;
+}
+button {
+  padding: 18px 22px;
+  font-family: "Raleway", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+}
+/* *********BUTTON-SERVICES************** */
+#button1 {
+  margin-right: 10px;
+  border: 2px solid rgba(255, 0, 0, 0.911);
+  background-color: transparent;
+  color: lightgray;
+  cursor: pointer;
+}
+/* *********BUTTON-JOIN NOW************** */
+#button2 {
+  margin-left: 10px;
+  padding: 18px 42px;
+  background-color: rgba(255, 0, 0, 0.911);
+  border: 2px solid rgba(255, 0, 0, 0.911);
+  cursor: pointer;
+}
+#button1:hover {
+  background-color: rgba(255, 0, 0, 0.911);
+  color: black;
+}
+
+#button2:hover {
+  background-color: rgba(192, 1, 1, 0.808);
+  border: 2px solid rgba(192, 1, 1, 0.808);
+  color: lightgray;
+}
+
+/* ************PAGE 2*************** */
+.container2 {
+  margin: 0px 0px -4px 0px;
+  padding: 0%;
+}
+/* ***************BIG RED BOX FOR QUOTES */
+.container2 .solganblock {
+  background-color: red;
+  margin: 0%;
+  padding: 38px 0px;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  cursor: default;
+}
+/* ********QUOTES TEXT*********** */
+.solganblock h4 {
+  margin: 0%;
+  text-align: center;
+  font-size: 96px;
+  font-weight: lighter;
+}
+.solganblock p {
+  margin-top: 0%;
+  text-align: center;
+  font-size: 21px;
+  font-weight: lighter;
+}
+
+/* ****************ABOUT ME PAGE*************** */
+.aboutme {
+  display: inline-flex;
+}
+/* ************ABOUT ME IMAGE************** */
+.aboutme img {
+  width: 50%;
+}
+/* **********ABOUT ME TEXT************* */
+.aboutmetext {
+  background-color: rgba(0, 0, 0, 0.952);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: lightgray;
+  padding: 49px 49px;
+  text-align: center;
+}
+.aboutmetext h4 {
+  font-family: "Lexend", sans-serif;
+  font-size: 19px;
+}
+.aboutmetext h4 span {
+  font-family: "Lexend", sans-serif;
+  text-transform: uppercase;
+  font-size: 35px;
+  font-weight: bolder;
+}
+
+.aboutmetext p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  margin: 49px 0px;
+  line-height: 18px;
+  font-size: 16px;
+}
+
+/* ****************PAGE 3*************** */
+.container3 {
+  margin: 0%;
+  padding: 4%;
+  border-top: 5px solid red;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  background-image: url(images/background2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  grid-gap: 8px;
+}
+/* ********HEADING PAGE 3************* */
+.headingpg3 {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  text-align: center;
+  text-transform: uppercase;
+}
+.headingpg3 h2 {
+  font-size: 55px;
+  font-weight: bolder;
+  line-height: 59px;
+  font-family: "Lexend", sans-serif;
+  margin: 0px 0px 0px 0px;
+  color: lightgray;
+}
+.headingpg3 h2 span {
+  font-size: 76px;
+  color: rgba(255, 0, 0, 0.911);
+  font-weight: bolder;
+  line-height: 20px;
+  font-family: "Lexend", sans-serif;
+  letter-spacing: 1px;
+  margin-left: 8px;
+}
+
+/* ************BOXES PAGE3************* */
+.box1 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.box2 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.box3 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.box4 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+.box5 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+.box6 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+/* ************ANIMATION ON BOXES */
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+  background: rgb(0, 0, 0);
+}
+
+.hovereffect .overlay {
+  width: 61%;
+  height: 52%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  padding: 3em;
+  text-align: left;
+}
+
+.hovereffect img {
+  display: block;
+  position: relative;
+  max-width: none;
+  width: calc(100% + 60px);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.45s;
+  transition: opacity 0.35s, transform 0.45s;
+  -webkit-transform: translate3d(-40px, 0, 0);
+  transform: translate3d(-40px, 0, 0);
+}
+
+.hovereffect h2 {
+  text-transform: uppercase;
+  color: white;
+  position: relative;
+  font-size: 26px;
+  background-color: transparent;
+  padding: 6% 0 0px 0;
+  margin: 43px 0px 0px -11px;
+  text-align: left;
+  font-family: "Bebas Neue", cursive;
+}
+.hovereffect .overlay:before {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  bottom: 20px;
+  left: 20px;
+  border: 1px solid #fff;
+  content: "";
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.45s;
+  transition: opacity 0.35s, transform 0.45s;
+  -webkit-transform: translate3d(-20px, 0, 0);
+  transform: translate3d(-20px, 0, 0);
+}
+
+.hovereffect:hover img {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.hovereffect:hover .overlay:before {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* ***************PAGE 4************* */
+
+.container4 {
+  margin: 0%;
+  padding: 0%;
+  background-image: url(images/background3.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* ************************JOIN ON MOBILE BOX************** */
+.container4 .c4heading {
+  background-color: rgb(0, 0, 0);
+  width: 100vw;
+  margin: 0%;
+  padding: 38px 0px;
+}
+
+.c4heading h4 {
+  margin: 35px 0px;
+  text-align: center;
+  font-size: 61px;
+  font-style: italic;
+  text-transform: uppercase;
+  color: white;
+  font-family: "Anton", sans-serif;
+  font-weight: bolder;
+  cursor: default;
+}
+
+.container4 .joinusonmobile {
+  margin: 100px 0px;
+  padding: 25px 0px;
+  background-color: white;
+  border-radius: 4px;
+  font-family: "Lexend", sans-serif;
+  text-align: center;
+}
+
+/* *****************JOIN ON MOBILE TEXT************* */
+.joinusonmobile h2 {
+  margin: 38px 60px 0px 60px;
+  padding: 5px 6px;
+  font-size: 39px;
+  color: black;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.joinusonmobile h2 span {
+  color: red;
+  font-weight: 400;
+}
+.joinusonmobile p {
+  margin: -6px 0px 32px 0px;
+  padding: 0px 0px 0px 0px;
+  color: black;
+  font-weight: normal;
+  font-size: 19px;
+}
+
+/* *************PHONE NUMBER FIELD**************** */
+.container4 .phoneno {
+  margin: 7px 0px;
+}
+#phnumber {
+  margin: 15px 5px 15px 0px;
+  padding: 9px 0px;
+  font-size: 19px;
+  border: none;
+  border-bottom: 1.5px solid;
+}
+/* ************SEND BUTTON ****************** */
+#sendbutton {
+  margin: 15px 0px 15px -1px;
+  padding: 10px 50px;
+  font-size: 19px;
+  font-weight: 400;
+  border: none;
+  border-radius: 2px;
+  background-color: #000000eb;
+  color: red;
+  cursor: pointer;
+}
+#sendbutton:hover {
+  color: white;
+  transition: 0.4s ease;
+  background-color: rgb(255 0 0 / 72%);
+}
+
+/* *************APP LINKS ******************** */
+.container4 .storelinks {
+  margin: 22px 0px;
+  padding: 0px 0px;
+}
+.container4 .storelinks h2 {
+  margin: 14px 0px;
+  padding: 0px 0px;
+  font-size: 20px;
+  text-transform: none;
+  line-height: 24px;
+}
+.container4 .storelinks a {
+  margin: 0px 16px;
+}
+
+/* ****************PAGE 5************** */
+.container5 {
+  margin: 0%;
+  padding: 2px 0px 22px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightgray;
+}
+
+/* ****************CONTACT US BOX************* */
+.container5 .contactus {
+  text-align: center;
+  margin: 0px 0px;
+  padding: 0px 0px;
+  display: flex;
+  flex-direction: column;
+}
+/* ************CONTACT US HEAIDNG***************88 */
+.container5 .contactus h2 {
+  font-family: "Lexend", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+}
+
+.container5 input,
+textarea {
+  border: none;
+  margin: 0px 0px 8px 0px;
+  padding: 8px 13px;
+  font-size: 15px;
+  font-family: "Lexend", sans-serif;
+  border-radius: 2px;
+}
+/* ******************SUBMIT BUTTON************* */
+#submitbtn {
+  border: none;
+  margin: 0px;
+  padding: 8px 24px;
+  font-size: 18px;
+  font-family: Lexend, sans-serif;
+  cursor: pointer;
+  border-radius: 2px;
+}
+#submitbtn:hover {
+  background-color: rgba(255, 0, 0, 0.815);
+  color: white;
+}
+
+/* ****************FOOTER******************* */
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.788);
+  color: white;
+  margin: 0px 0px;
+  padding: 19px 0px;
+}
+/* ***************FOOTER LEFT PART******************* */
+footer .leftside {
+  width: 50%;
+  text-align: left;
+  padding: 0px 90px;
+  font-family: "Lexend", sans-serif;
+}
+footer .leftside .fa {
+  background-color: black;
+  padding: 8px;
+  border-radius: 50%;
+}
+/* ****************CONTACT DETAILS****************** */
+footer .location,
+.telephone,
+.mail {
+  margin-top: 18px;
+}
+footer .leftside a {
+  color: white;
+}
+
+/* *************FOOTER RIGHT PART *************** */
+footer .rightside {
+  width: 50%;
+  text-align: left;
+  padding: 0px 90px;
+  font-family: "Lexend", sans-serif;
+}
+footer .rightside h4 {
+  margin: 9px 0px 9px 0px;
+  font-size: 18px;
+  font-weight: bolder;
+}
+footer .rightside p {
+  margin: 16px 111px 13px 0px;
+  color: lightgray;
+}
+footer .rightside a {
+  margin: 0px 15px 0px 0px;
+  color: white;
+  font-size: 18px;
+}
+
+/* **************DESIGNERS PAGE************** */
+/* ************CAN BE REMOVED IF NOT-NEEDED*********** */
+.designerspage {
+  background-image: url(images/Flat-Mountains.svg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+/* ******************DESIGNER LEFT PART - IMGSIDE********** */
+.designerspage .designerleft {
+  width: 40%;
+  margin: 0px 0px;
+  padding: 0px 0px;
+}
+.designerspage .designerleft img {
+  margin: 100px 0px 107px 201px;
+  padding: 0px 0px 0px 0px;
+  border-radius: 50%;
+  width: 200px;
+}
+/* ****************RIGHTSIDE TEXT SIDE************** */
+.designerspage .designerright h3 {
+  margin: 120px 252px 0px 90px;
+  padding: 0px 0px;
+  font-size: 26px;
+  font-family: "Lexend", sans-serif;
+  font-weight: 400;
+}
+
+/* ***************LINKS FOR THE DESIGNER************** */
+.designerspage .designerlink {
+  margin: 15px 5px 0px 90px;
+  padding: 0px 0px;
+  font-size: 23px;
+  font-weight: 400;
+}
+.designerspage .designerlink a {
+  color: #551a8b;
+  margin-right: 11px;
+}
+.designerright span a {
+  text-decoration: none;
+  color: #551a8b;
+}
+.designerright span a:hover {
+  text-decoration: underline;
+}
+
+/* ******************RESPONSIVNESS TAB VIEW******************* */
+@media (max-width: 801px) {
+  .logo img {
+    width: 100px;
+    margin-top: 5px;
+  }
+  .menu a {
+    margin: 4px 11px;
+  }
+  .links a i {
+    margin: 4px 11px 0px 11px;
+  }
+  .aboutme {
+    display: inline-flex;
+    height: 472px;
+  }
+  .aboutme img {
+    width: 50%;
+    height: 472px;
+  }
+  .aboutmetext h4 span {
+    font-size: 27px;
+  }
+  .aboutmetext p {
+    margin: 9px 0px;
+  }
+
+  .headingpg3 h2 {
+    font-size: 48px;
+  }
+  .headingpg3 h2 span {
+    font-size: 66px;
+  }
+  .hovereffect .overlay:before {
+    top: 11px;
+    right: 55px;
+    bottom: 47px;
+    left: 11px;
+  }
+  .hovereffect h2 {
+    font-size: 18px;
+    padding: 6% 0 0px 0;
+    margin: 10px 0px 0px -28px;
+  }
+  footer {
+    width: 100%;
+    margin: 0px 0px;
+    padding: 19px 0px;
+  }
+  footer .leftside {
+    width: 70%;
+    padding: 0px 0px 0px 25px;
+  }
+
+  footer .rightside {
+    padding: 0px 0px 0px 0px;
+  }
+
+  footer .rightside p {
+    margin: 12px 0px 13px 0px;
+  }
+  .designerspage .designerleft img {
+    margin: 47px 0px 81px 135px;
+    width: 159px;
+  }
+
+  .designerspage .designerright h3 {
+    margin: 47px 35px 0px 89px;
+    font-size: 20px;
+  }
+}
+
+/* ****************REPONSIVNESS MOBILE VIEW**************** */
+@media (max-width: 481px) {
+  .container1 {
+    background-position-x: 56%;
+  }
+  header {
+    display: block;
+  }
+  .logo img {
+    width: 104px;
+    margin-top: 1px;
+    margin-bottom: -15px;
+  }
+  .container1 .menu {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu a {
+    margin: 4px 11px;
+  }
+  .links a i {
+    margin: 14px 11px 0px 11px;
+  }
+  .title h1 {
+    font-size: 50px;
+    margin: 49px 3px 0px 0px;
+    line-height: 45px;
+  }
+  .title h1 span {
+    font-size: 59px;
+  }
+  button {
+    padding: 14px 14px;
+  }
+  #button2 {
+    margin-left: 5px;
+    padding: 14px 30px;
+  }
+  .container2 .solganblock {
+    padding: 18px 0px;
+  }
+  .solganblock h4 {
+    font-size: 56px;
+  }
+  .solganblock p {
+    font-size: 13px;
+  }
+  .aboutme {
+    display: contents;
+  }
+  .aboutme img {
+    width: 100%;
+    margin: 0px 0px -6px 0px;
+    height: 394px;
+  }
+  .aboutmetext h4 {
+    font-size: 15px;
+  }
+  .aboutmetext h4 span {
+    font-size: 22px;
+  }
+  .aboutmetext p {
+    font-size: 14px;
+  }
+  .container3 {
+    padding: 10%;
+    display: flow-root;
+  }
+  .headingpg3 h2 {
+    margin-bottom: 20px;
+  }
+  .headingpg3 h2 span {
+    font-size: 51px;
+  }
+  .headingpg3 h2 span {
+    font-size: 51px;
+  }
+  .hovereffect .overlay:before {
+    top: 19px;
+    right: 0px;
+    bottom: 5px;
+    left: 19px;
+  }
+  .hovereffect h2 {
+    font-size: 34px;
+    padding: 6% 0 0px 0;
+    margin: 63px 0px 0px -14px;
+  }
+  .hovereffect {
+    margin-bottom: 11px;
+  }
+  .container4 .c4heading {
+    padding: 0px 0px;
+  }
+  .c4heading h4 {
+    margin: 35px 0px;
+    font-size: 34px;
+  }
+  .container4 .joinusonmobile {
+    margin: 100px 12px;
+  }
+  .joinusonmobile h2 {
+    margin: 6px 43px 0px 43px;
+    padding: 5px 4px;
+    font-size: 33px;
+  }
+  .joinusonmobile p {
+    font-size: 14px;
+  }
+  #phnumber {
+    margin: 15px 5px 15px 0px;
+    padding: 9px 0px;
+    font-size: 17px;
+    border: none;
+    border-bottom: 1.5px solid;
+  }
+  .container5 {
+    margin: 5%;
+    padding: 2px 4px 22px 4px;
+    display: flow-root;
+  }
+  .container5 .contactus h2 {
+    font-size: 29px;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .leftside {
+    width: 75%;
+    padding: 0px 0px 0px 0px;
+    text-align: center;
+  }
+  footer .location,
+  .telephone,
+  .mail {
+    margin-top: 18px;
+    font-size: 15px;
+  }
+  footer .rightside {
+    padding: 0px 0px 0px 0px;
+    text-align: center;
+  }
+  footer .rightside h4 {
+    margin: 23px 0px 9px 0px;
+    font-size: 18px;
+  }
+  footer .rightside a {
+    margin: 0px 0px 0px 17px;
+    font-size: 17px;
+  }
+  .designerspage {
+    display: flow-root;
+  }
+  .designerspage .designerleft img {
+    margin: 22px 107px;
+  }
+  .designerspage .designerright h3 {
+    margin: 0px 68px;
+    font-size: 19px;
+  }
+}

@@ -1,0 +1,48 @@
+{% extends 'communicate_main.html' %}
+{% block content %}
+
+
+<style>
+    .profile-container{
+        display:grid;
+        grid-template-columns: 1fr 3fr 1fr;
+
+    }
+</style>
+<form method= "GET" action = "{% url 'communicate' %}">
+    <input type = "text" name = "q" placeholder="Search Groups........" />
+</form>
+
+ {% if request.user.is_authenticated %}
+<p> hello {{request.user}} </p>
+<a href ="{% url 'logout' %}">Logout</a>
+
+{% else %}
+<a href = "{% url 'login'%}">Login </a> 
+
+{% endif %} 
+<hr> 
+
+<h1> {{user.username}} </h1>
+<div class = "profile-container">
+    <div>
+        {% include 'topic_component.html' %}
+    </div>
+
+    <div>
+        
+        
+        <div>
+            {% include 'feed_component.html' %}
+        </div>
+    </div>
+        
+    
+    <div>
+        {% include 'activity_component.html' %}
+        
+   </div>
+
+
+</div>
+{% endblock content %}

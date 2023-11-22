@@ -1,0 +1,63 @@
+
+ {% extends 'basehome.html' %} 
+
+
+ {% block content %}
+ 
+ 
+ <div class="container mb-3">
+   <h2 class="text-center"> Contact Us </h2>
+   <form method="post" action="/home_contact/">
+     {% csrf_token %}
+     
+   
+ 
+     <div class="mb-3 ">
+       <label for="name" class="form-label">Name</label>
+       <input type="text" class="form-control" id="name" name="name" placeholder="Enter your first and last name.">
+       
+     </div>
+     <div class="mb-3">
+       <label for="exampleInputEmail1" class="form-label">Email address</label>
+       <input type="email" class="form-control" id="Email1" name="email" placeholder="Enter your email adress.">
+       
+     </div>
+     <div class="mb-3">
+       <label for="phone number " class="form-label">Phone Number </label>
+       <input type="phone number " class="form-control" id="phone" name="phone" placeholder="Enter your phone number.">
+     </div>
+     <div class="mb-3">
+       <label for="exampleInputPassword1" class="form-label">Your Queries</label>
+       <textarea type="password" class="form-control" id="desc" rows="3" name="desc"></textarea>
+     </div>
+     <div id="emailHelp" class="form-text">We never share your information to anyone.</div>
+     <div class="mb-3 form-check">
+       <input type="checkbox" class="form-check-input" id="exampleCheck1">
+       <label class="form-check-label" for="exampleCheck1">Check me Out </label>
+     </div>
+     
+      <button type="submit" class="btn btn-primary">Submit</button>
+      
+   </form>
+ 
+ 
+ </div>
+ 
+ 
+ 
+ </div>
+ <div>
+ 
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.567082173059!2d138.5606547150845!3d-34.992507080360575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ab0d00b69fda143%3A0xf78ec1dc83b19aea!2s9%20Charles%20St%2C%20Ascot%20Park%20SA%205043!5e0!3m2!1sen!2sau!4v1663582591302!5m2!1sen!2sau"  width="1265" height="300" style="border:100;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </div>
+ 
+ 
+ 
+ {% endblock content  %} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

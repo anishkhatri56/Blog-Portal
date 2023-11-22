@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- Icon - IconMonster -->
+    <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css" />
+    <!-- Mumble UI -->
+    <link rel="stylesheet" href="{% static 'uikit/styles/uikit.css' %}" />
+    <!-- Dev Search UI -->
+    <link rel="stylesheet" href="{% static 'styles/app.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/footer.css' %}" />
+  
+    <title>We are Warriors</title>
+    
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container container--narrow">
+          <a href="/" class="header__logo">
+            <img src="{% static 'img/logo.svg' %}" alt="Trainer's Room LOGO " />
+          </a>
+          <nav class="header__nav">
+            <input type="checkbox" id="responsive-menu" />
+            <label for="responsive-menu" class="toggle-menu">
+              <span>Menu</span>
+              <div class="toggle-menu__lines"></div>
+            </label>
+            <ul class="header__menu">
+              
+              
+              <li class="header__menuItem"><a href="{% url 'profiles' %}">Trainers</a></li>
+              <li class="header__menuItem"><a href="{% url 'product_home' %}">Products</a></li> 
+              
+              <li class="header__menuItem"><a href="{% url 'project-customer' %}">Programs</a></li>
+              <li class="header__menuItem"><a href="{% url 'communicate' %}">Groups</a></li>
+              
+              
+              <li class="header__menuItem"><a href="{% url 'inbox' %}">Inbox</a></li>
+              {% comment %} <li class="header__menuItem"><a href="{% url 'account' %}">Account</a></li> {% endcomment %}
+              {% comment %} <li class="header__menuItem"><a href="{% url 'logout' %}" class="btn btn--sub">Logout</a></li> {% endcomment %}
+              
+              
+            </ul>
+          </nav>
+        </div>
+      </header>
+        
+{% block content %}
+{% comment %} <a href="{% url 'create-project' %}">Add Project</a> {% endcomment %}
+
+
+<main class="projects">
+    <section class="hero-section text-center">
+      <div class="container container--narrow">
+        <div class="hero-section__box">
+          <h2>Search for <span>Programs to Enroll</span></h2>
+        </div>
+
+        <div class="hero-section__search">
+          <form id ='searchForm' class="form" action="{% url 'projects' %}" method="get">
+            <div class="form__field">
+              <label for="formInput#search">Search By Programs </label>
+              <input class="input input--text" id="formInput#search" type="text" name="search_query"
+                value= "{{search_query}}"placeholder="Search by Programs Title"  />
+            </div>
+
+            <input class="btn btn--sub btn--lg" type="submit" value="Search" />
+          </form>
+        </div>
+      </div>
+    </section>
+  {% comment %} Search Result: DevList  {% endcomment %}
+    <section class="projectsList">
+      <div class="container">
+        <div class="grid grid--three">
+           {% for project in projects  %}
+
+          <div class="column">
+            <div class="card project">
+              <a href="{% url 'project' project.id %}" class="project">
+                <img class="project__thumbnail" src={{ project.imageURL }} alt="programs thumbnail" />
+                <div class="card__body">
+                  <h3 class="project__title">{{project.title}}</h3>
+                   <p><a class="project__author" href="{% url 'user-profile' project.owner.id %}">{{project.owner.name}}</a></p> 
+                  <p class="project--rating">
+                    <span style="font-weight: bold;">{{project.vote_ratio}} Positive Feedback ({{project.vote_total}}) Vote{{project.vote_total|pluralize:"s"}}</span> 
+                  </p>
+                  <div class="project__tags">
+                    {% for tag in project.tags.all  %}
+                    <span class="tag tag--pill tag--main">
+                      <small>{{tag}}</small>
+                    </span>
+                    {% endfor %}
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          {% endfor %}
+
+          
+
+
+        </div>
+      </div>
+
+    </section>
+
+    {% include 'pagination.html' with queryset=projects custom_range=custom_range  %}
+
+    
+
+  
+  </main>
+  {% include 'footer.html' %}
+
+
+
+
+
+
+
+
+{% endblock content %}
